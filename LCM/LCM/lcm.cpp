@@ -8,10 +8,6 @@ LCM::LCM(QWidget *parent)
     , ui(new Ui::LCM)
 {
     ui->setupUi(this);
-
-
-
-
 }
 
 LCM::~LCM()
