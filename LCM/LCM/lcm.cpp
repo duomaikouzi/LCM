@@ -1,5 +1,6 @@
 #include "lcm.h"
 #include "ui_lcm.h"
+#include "QDebug"
 //测试
 
 LCM::LCM(QWidget *parent)
@@ -7,6 +8,9 @@ LCM::LCM(QWidget *parent)
     , ui(new Ui::LCM)
 {
     ui->setupUi(this);
+
+
+
 
 }
 
