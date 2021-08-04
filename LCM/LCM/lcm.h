@@ -2,6 +2,7 @@
 #define LCM_H
 
 #include <QMainWindow>
+#include "QSettings"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class LCM; }
@@ -17,5 +18,6 @@ public:
 
 private:
     Ui::LCM *ui;
+    QSettings *config_port;
 };
 #endif // LCM_H
