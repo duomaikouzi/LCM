@@ -1,8 +1,15 @@
-#ifndef LCM_H
+﻿#ifndef LCM_H
 #define LCM_H
 
 #include <QMainWindow>
-#include "QSettings"
+#include <QSettings>
+#include <QSerialPort>
+#include <QMessageBox>
+#include <QUdpSocket>
+#include <QNetworkDatagram>
+
+
+#pragma execution_character_set("utf-8")
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class LCM; }
@@ -15,9 +22,22 @@ class LCM : public QMainWindow
 public:
     LCM(QWidget *parent = nullptr);
     ~LCM();
+    void PortOpen();
+    void UdpNetConfig();
+
+public slots:
+    void ReceiveInfo();
+    void ReadPendingDatagrams();
 
 private:
     Ui::LCM *ui;
-    QSettings *config_port;
+    QSettings *config_port; //配置文件类
+    QSerialPort *seri_port; //串口类
+    QUdpSocket *udp_port;   //网口udpsocket类
+
+    char buffer_net[256];
+    qint16 length_buffer_net;
+    char *buffer_serial;
+    qint16 length_buffer_serial;
 };
 #endif // LCM_H
