@@ -68,7 +68,7 @@ void LCM::PortOpen()
          seri_port->setParity(QSerialPort::NoParity);
          seri_port->setStopBits(QSerialPort::OneStop);
      }
-     qDebug()<<config_port->value("MFCC_PORT/Baudrate").toInt();
+     //qDebug()<<config_port->value("MFCC_PORT/Baudrate").toInt();
      //连接串口接收处理函数
      connect(seri_port,&QSerialPort::readyRead,this,&LCM::ReceiveInfo);
 
