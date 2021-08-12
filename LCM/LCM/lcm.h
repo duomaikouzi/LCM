@@ -7,6 +7,7 @@
 #include <QMessageBox>
 #include <QUdpSocket>
 #include <QNetworkDatagram>
+#include <QByteArray>
 
 
 #pragma execution_character_set("utf-8")
@@ -24,10 +25,19 @@ public:
     ~LCM();
     void PortOpen();
     void UdpNetConfig();
+    void SendInfo(char *info,int len );
+    void SendInfo(const QString &info);
 
 public slots:
     void ReceiveInfo();
     void ReadPendingDatagrams();
+
+private slots:
+    void on_pushButton_clicked();
+
+    void on_pushButton_exit_clicked();
+
+    void on_pushButton_poweron_clicked();
 
 private:
     Ui::LCM *ui;
@@ -39,5 +49,9 @@ private:
     qint16 length_buffer_net;
     char *buffer_serial;
     qint16 length_buffer_serial;
+
+
+
+    char buffer_A0[5];
 };
 #endif // LCM_H

@@ -1,4 +1,5 @@
-#include "lcm.h"
+﻿#include "lcm.h"
+#include "fun.h"
 
 #include <QApplication>
 

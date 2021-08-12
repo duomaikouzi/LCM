@@ -1,7 +1,7 @@
 ﻿#include "lcm.h"
 #include "ui_lcm.h"
 #include "QDebug"
-
+#include "fun.h"
 
 //测试
 
@@ -93,6 +93,35 @@ void LCM:: ReadPendingDatagrams()
 
 }
 
+void LCM::SendInfo(char *info, int len)
+{
+    for (int i=0;i<len;++i)
+    {
+        seri_port->write(info,len);
+    }
+
+}
+void LCM::SendInfo(const QString &info)
+{
+    QByteArray sendBuf;
+//    if(info.contains(""))
+//    {
+//        info.replace(QString(""),QString(""));
+//    }
+    sendBuf=info.toUtf8();
+    seri_port->write(sendBuf);
+}
+
 //考虑通过回调函数实现串口和网口的功能，保证能够兼容
 
 
+//关闭按钮
+void LCM::on_pushButton_exit_clicked()
+{
+    this->close() ;
+}
+
+void LCM::on_pushButton_poweron_clicked()
+{
+   command(buffer_A0,0x30,0x32);
+}

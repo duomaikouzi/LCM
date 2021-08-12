@@ -6,25 +6,28 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>824</width>
+    <height>680</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>LCM</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="pushButton_exit">
     <property name="geometry">
      <rect>
-      <x>470</x>
-      <y>260</y>
-      <width>93</width>
-      <height>28</height>
+      <x>680</x>
+      <y>570</y>
+      <width>100</width>
+      <height>50</height>
      </rect>
     </property>
     <property name="text">
-     <string>PushButton</string>
+     <string>退出</string>
+    </property>
+    <property name="autoRepeatInterval">
+     <number>100</number>
     </property>
    </widget>
    <widget class="QTextEdit" name="textEdit">
@@ -37,13 +40,45 @@
      </rect>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton_poweron">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>470</y>
+      <width>100</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>上电</string>
+    </property>
+    <property name="autoRepeatInterval">
+     <number>100</number>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_poweroff">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>530</y>
+      <width>100</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>下电</string>
+    </property>
+    <property name="autoRepeatInterval">
+     <number>100</number>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>824</width>
      <height>26</height>
     </rect>
    </property>
