@@ -1,6 +1,6 @@
 ﻿#include "lcm.h"
 #include "ui_lcm.h"
-#include "QDebug"
+
 
 //测试
 
@@ -113,26 +113,6 @@ void LCM::SendInfo(const QString &info)
 
 //考虑通过回调函数实现串口和网口的功能，保证能够兼容
 
-//void LCM::command(char *buffer,unsigned char add,unsigned char cmd)
-//{
-
-//    buffer[0]=(char)0xaa;
-//    buffer[1]=(char)0x51;
-//    buffer[2]=(char)add;
-//    buffer[3]=(char)cmd;
-//    crc_calculate(buffer,5);
-//    qDebug("%d",buffer[4]);
-//    qDebug("%d",buffer[5]);
-//}
-
-
-//void LCM::crc_calculate(char *buffer,unsigned char len)
-//{
-//    buffer[len-2]=0x01;
-//    buffer[len-1]=0x00;
-//}
-
-
 
 //关闭按钮
 void LCM::on_pushButton_exit_clicked()
@@ -142,9 +122,7 @@ void LCM::on_pushButton_exit_clicked()
 
 void LCM::on_pushButton_poweron_clicked()
 {
-   command(buffer_A0,0x30,0x32);
-   qDebug()<<buffer_A0[4];
-   qDebug()<<buffer_A0[5];
+   command(buffer_A0,0x31,0x32);
 }
 
 

@@ -8,6 +8,7 @@
 #include <QUdpSocket>
 #include <QNetworkDatagram>
 #include <QByteArray>
+#include <QDebug>
 #include "fun.h"
 
 
@@ -56,6 +57,6 @@ private:
 
 
 
-    char buffer_A0[5];
+    char buffer_A0[6];
 };
 #endif // LCM_H
