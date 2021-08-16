@@ -1,5 +1,5 @@
 ﻿#include "lcm.h"
-#include "fun.h"
+
 
 #include <QApplication>
 

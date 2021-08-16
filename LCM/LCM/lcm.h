@@ -8,6 +8,7 @@
 #include <QUdpSocket>
 #include <QNetworkDatagram>
 #include <QByteArray>
+#include "fun.h"
 
 
 #pragma execution_character_set("utf-8")
@@ -27,6 +28,9 @@ public:
     void UdpNetConfig();
     void SendInfo(char *info,int len );
     void SendInfo(const QString &info);
+//    void command(char *buffer,unsigned char add,unsigned char cmd);
+//    void crc_calculate(char *buffer,unsigned char len);
+
 
 public slots:
     void ReceiveInfo();

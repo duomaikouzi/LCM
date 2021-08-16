@@ -31,6 +31,7 @@ public:
     QTextEdit *textEdit;
     QPushButton *pushButton_poweron;
     QPushButton *pushButton_poweroff;
+    QPushButton *pushButton;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -56,6 +57,10 @@ public:
         pushButton_poweroff->setObjectName(QStringLiteral("pushButton_poweroff"));
         pushButton_poweroff->setGeometry(QRect(80, 530, 100, 50));
         pushButton_poweroff->setAutoRepeatInterval(100);
+        pushButton = new QPushButton(centralwidget);
+        pushButton->setObjectName(QStringLiteral("pushButton"));
+        pushButton->setGeometry(QRect(330, 480, 100, 50));
+        pushButton->setAutoRepeatInterval(100);
         LCM->setCentralWidget(centralwidget);
         menubar = new QMenuBar(LCM);
         menubar->setObjectName(QStringLiteral("menubar"));
@@ -76,6 +81,7 @@ public:
         pushButton_exit->setText(QApplication::translate("LCM", "\351\200\200\345\207\272", Q_NULLPTR));
         pushButton_poweron->setText(QApplication::translate("LCM", "\344\270\212\347\224\265", Q_NULLPTR));
         pushButton_poweroff->setText(QApplication::translate("LCM", "\344\270\213\347\224\265", Q_NULLPTR));
+        pushButton->setText(QApplication::translate("LCM", "\344\270\213\347\224\265", Q_NULLPTR));
     } // retranslateUi
 
 };

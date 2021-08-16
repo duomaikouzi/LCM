@@ -1,10 +1,12 @@
 ﻿#include "fun.h"
+
 void command(char *buffer,unsigned char add,unsigned char cmd)
 {
-    buffer[0]=0xaa;
-    buffer[1]=0x51;
-    buffer[2]=add;
-    buffer[3]=cmd;
+
+    buffer[0]=(char)0xaa;
+    buffer[1]=(char)0x51;
+    buffer[2]=(char)add;
+    buffer[3]=(char)cmd;
     crc_calculate(buffer,5);
 }
 
